@@ -12,7 +12,7 @@ payload-dumper-go.exe -p boot payload.bin
 After that I just take the stock boot image and patch it from within the magisk app.
 
 # Flash patched boot image from fastboot
-I assume you already know that you need to have unlocked bootloader to do this. After that you need to know the current A/B active slot by running the following command
+I assume you already know that you need to have unlocked bootloader to do this. After that you just need to flash to current A/B active slot by running the following command
 ```bash
 fastboot flash boot magisk_patched-boot.img
 ```
