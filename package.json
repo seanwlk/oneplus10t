@@ -1,0 +1,8 @@
+{
+  "name": "oneplus10t-boot-img",
+  "version": "0.0.0",
+  "dependencies": {
+    "oxygen-updater": "oxygen-updater/oxygen-updater",
+    "payload-dumper-go": "ssut/payload-dumper-go"
+  }
+}
