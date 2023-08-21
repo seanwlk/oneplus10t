@@ -18,8 +18,8 @@ fastboot flash boot magisk_patched-boot.img
 ```
 This should flash on the currently active slot but if you want to know which it is you have to `fastboot getvar all` and look for `current-slot` after which you can use `boot_a` and `boot_b` accordingly in the previously mentioned flash command instead of just `boot`
 
-# How to keep magisk after OTA
-To keep the root after an official OnePlus OTA you have to open Magisk app **BEFORE** rebooting the device after the OTA installation completed and from there use the option `Install` -> `Install to Inactive Slot`. Else you'll have to flash again the patched boot image from here or after you extracted your own
+# How to keep magisk after OTA without fastboot
+You can patch the boot image without using fastboot and therefore use the files in this repository only as a fallback. To keep the root you need to run the OTA update through [OneplusLocalUpgrade](https://github.com/seanwlk/oneplus10t/blob/main/OPLocalUpdate_For_Android12.apk) then you have to open Magisk app **BEFORE** rebooting the device after the OTA installation completed and from there use the option `Install` -> `Install to Inactive Slot`. Else you'll have to flash again the patched boot image from [here](https://github.com/seanwlk/oneplus10t/releases) or after you extracted your own
 
 # Download
 All files are available from [releases](https://github.com/seanwlk/oneplus10t/releases)
