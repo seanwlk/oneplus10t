@@ -18,6 +18,17 @@ fastboot flash boot magisk_patched-boot.img
 ```
 This should flash on the currently active slot but if you want to know which it is you have to `fastboot getvar all` and look for `current-slot` after which you can use `boot_a` and `boot_b` accordingly in the previously mentioned flash command instead of just `boot`
 
+# NOTICE for Oxygen OS 14​
+Oneplus broke fastboot with the first OOS14 update and you cannot get into fastboot anymore. Not from key pressed combination nor from adb reboot bootloader.
+You can still flash the patched image by booting into the phone, enabling adb and booting into fastbootd with the following command
+```bash
+adb reboot fastboot
+```
+when you are there you have to flash the boot image with
+```bash
+fastboot flash boot magisk_patched-boot.img
+```
+
 # How to keep magisk after OTA without fastboot
 You can patch the boot image without using fastboot and therefore use the files in this repository only as a fallback. To keep the root you need to run the OTA update through [OneplusLocalUpgrade](https://github.com/seanwlk/oneplus10t/blob/main/OPLocalUpdate_For_Android12.apk) then you have to open Magisk app **BEFORE** rebooting the device after the OTA installation completed and from there use the option `Install` -> `Install to Inactive Slot`. Else you'll have to flash again the patched boot image from [here](https://github.com/seanwlk/oneplus10t/releases) or after you extracted your own
 
