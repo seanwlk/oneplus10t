@@ -28,6 +28,10 @@ when you are there you have to flash the boot image with
 ```bash
 fastboot flash boot magisk_patched-boot.img
 ```
+Or Kitsune Magisk
+```bash
+fastboot flash boot kitsune_patched-boot.img
+```
 
 # How to keep magisk after OTA without fastboot
 You can patch the boot image without using fastboot and therefore use the files in this repository only as a fallback. To keep the root you need to run the OTA update through [OneplusLocalUpgrade](https://github.com/seanwlk/oneplus10t/blob/main/OPLocalUpdate_For_Android12.apk) then you have to open Magisk app **BEFORE** rebooting the device after the OTA installation completed and from there use the option `Install` -> `Install to Inactive Slot`. Else you'll have to flash again the patched boot image from [here](https://github.com/seanwlk/oneplus10t/releases) or after you extracted your own
