@@ -33,6 +33,12 @@ Or Kitsune Magisk
 fastboot flash boot kitsune_patched-boot.img
 ```
 
+# Restore lost fastboot / bootloader after Oxygen OS 14​ update 
+You can restore the fastboot by flashing via fastbootd the [abl.elf file](https://github.com/seanwlk/oneplus10t/raw/refs/heads/main/abl.elf) in this repo. 
+```bash
+fastboot flash abl abl.elf
+```
+
 # How to keep magisk after OTA without fastboot
 You can patch the boot image without using fastboot and therefore use the files in this repository only as a fallback. To keep the root you need to run the OTA update through [OneplusLocalUpgrade](https://github.com/seanwlk/oneplus10t/blob/main/OPLocalUpdate_For_Android12.apk) then you have to open Magisk app **BEFORE** rebooting the device after the OTA installation completed and from there use the option `Install` -> `Install to Inactive Slot`. Else you'll have to flash again the patched boot image from [here](https://github.com/seanwlk/oneplus10t/releases) or after you extracted your own
 
